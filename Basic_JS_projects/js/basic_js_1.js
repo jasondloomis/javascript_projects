@@ -5,4 +5,4 @@ var aString = "This is an alert of the crazy \"broadcast system\"! This message 
 
 document.write(color);
 document.write(aString);
-alert(x + y); // add variables
+// alert(x + y); // add variables
