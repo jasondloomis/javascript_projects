@@ -1,0 +1,12 @@
+var car = "Porsche";
+var truck = "Ford F150";
+var bool = 10>3;
+document.write(typeof car, "<br>");
+document.write(bool, "<br>");
+console.log(2*2);
+document.write("3" + 12, "<br>");
+document.write(100 == 5, "<br>", 100 == 100, "<br>");
+document.write(76 === 76, "<br>", "5" === 5, "<br>", car === truck, "<br>", 21 === 41, "<br>" );
+document.write("<p>&& ", 5 > 6 && 7 > 4, "</p>");
+document.write("<p>OR ", 5 < 6 || 7 > 1, "</p>");
+document.write("<p>NOT ", !(5 > 9), "</p>");
