@@ -28,3 +28,24 @@ function weekendIf() {
         document.getElementById("condition").innerHTML = "Almost to the weekend!"
     }
 }
+
+function errorCode() {
+    x += y * x;
+    document.getElementById("error").innerHTML = x
+}
+
+function timeFunction() {
+    var time = new Date().getHours();
+    var reply;
+
+    if (time < 12 == time > 0) {
+        reply = "It is morning time!";
+    }
+    else if (time > 12 == time < 18){
+        reply = "It is the afternoon.";
+    }
+    else {
+        reply = "It is evening time."
+    }
+    document.getElementById("time").innerHTML = reply;
+}
