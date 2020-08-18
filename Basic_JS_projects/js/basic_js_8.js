@@ -36,3 +36,8 @@ function valueArray() {
     var pets = ["Cats", "Dogs", "Birds", "Fish", "Lyons"];
     document.getElementById("value").innerHTML = pets.valueOf();
 }
+
+function concatStr() {
+    var str = " Johnny needs to find a better job!"
+    document.getElementById("concat").innerHTML = sentence.concat(str);
+}
