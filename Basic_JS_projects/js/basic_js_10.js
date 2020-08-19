@@ -55,5 +55,4 @@ let dog = {
         return `The ${this.breed} is known for it's beautiful ${this.color} and outstanding ${this.skills} abilities!`;
         }
 };
-//document.getElementById("scope").innerHTML = dog.description();
-document.write(dog.description);
+document.getElementById("scope").innerHTML = dog.description();
