@@ -47,7 +47,8 @@ function placeXOrO(squareNumber) {
         }
     }
 }
-
+// Search for win conditions
+// Drawline function is called to execute the line when condition is met
 function checkWinConditions() {
     if (arrayIncludes('0X', '1X', '2X')) { drawWinLine(50, 100, 558, 100); }
     else if (arrayIncludes('3X', '4X', '5X')) { drawWinLine(50, 304, 558, 304); }
@@ -65,6 +66,7 @@ function checkWinConditions() {
     else if (arrayIncludes('2O', '5O', '8O')) { drawWinLine(508, 50, 508, 558); }
     else if (arrayIncludes('6O', '4O', '2O')) { drawWinLine(100, 508, 510, 90); }
     else if (arrayIncludes('0O', '4O', '8O')) { drawWinLine(100, 100, 520, 520); }
+    // Condtion to check for tie when all 9 squares are selected
     else if (selectedSquares.length >= 9) {
         audio('./media/tie.mp3');
         setTimeout(function () { resetGame(); }, 1000);
