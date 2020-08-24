@@ -3,20 +3,20 @@ body {
 }
 
 #menuBG {
-    width: 400px;
+    width: 600px;
     height: 470px;
     margin: 10px auto;
 }
 
 #frmMenu {
-    width: 400px;
+    width: 600px;
     height: 200px;
 }
 
 #totalPrice {
     width: 200px;
     height: 190px;
-    margin: 0 auto;
+    margin-top: 20px;
     float: right;
 }
 
@@ -32,6 +32,11 @@ body {
     float: right;
 }
 
+.center {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
 #showText {
     width: 200px;
     height: 190px;
