@@ -33,14 +33,14 @@ function show() {
         // displays the task as a list and creates the 'x' button
         html += '<li>' + todos[i] + '<button class="remove" id="' + i + '">x</button></li>';
     };
+    html += '</ul>';
+    // displays task as list
+    document.getElementById('todos').innerHTML = html;
     // remove items from todo array
     var buttons = document.getElementsByClassName('remove');
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', remove);
     };
-    html += '</ul>';
-    // displays task as list
-    document.getElementById('todos').innerHTML = html;
 }
 // create functionality of removing todo items from array
 function remove() {
