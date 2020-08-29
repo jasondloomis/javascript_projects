@@ -1,0 +1,46 @@
+html {
+    font-family: "Avenir Next", Helvetica, sans-serif;
+    text-align: center;
+}
+
+body {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input {
+    padding-top: 30px;
+    width: 500px;
+    height: 60px;
+    font-size: 40px;
+    border: 0;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+hr {
+    height: 2px;
+    color: #c2bfbf;
+}
+
+li {
+    text-align: left;
+    font-size: 40px;
+    list-style: none;
+    margin: 5px;
+}
+
+footer {
+    border: 2px solid #c2bfbf;
+    border-style: inset;
+    border-radius: 10px;
+    color: lightslategray;
+}
+
+.remove {
+    padding: 2px 5px;
+    margin-left: 10px;
+}
