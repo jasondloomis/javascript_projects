@@ -14,17 +14,18 @@
 <!-- Navbar -->
 	<div class="Navbar">
 		<a class="active" href="#Home">Home</a>
+		<a href="#Slideshow">Slideshow</a>
 		<a href="#About">About</a>
 		<a href="#GitHub">GitHub</a>
-		<a href="#Contact">Contact</a>
+		<a onclick="openForm()" ondblclick="closeForm()">Contact</a>
 	</div>
 
 <!-- Home -->
+	<div id="Home">
 		<br> <!-- Breaks inserted to add space between navbar and first heading -->
 		<br>
 
 <!-- Video -->
-	<div id="Home">
 		<video autoplay muted loop id="Typing_Video"> <!-- Makes the video play automatically, on a loop and with no sound -->
 			<source src="./videos/Typing.mp4" type="video/mp4">
 			Your browser does not support HTML5 video. <!-- Display message if video fails to run -->
@@ -32,7 +33,7 @@
 	</div>
 
 <!-- Video text --> 
-	<div class="Video_Text"> 
+	<div> 
 		<h1 id="main_heading">Jason Loomis' Portfolio</h1>
 			<p  class="center_text"> 
 				<strong>
@@ -48,6 +49,68 @@
 			</p> 
 	</div>
 
+<!-- Slideshow section -->
+<div id="Slideshow">
+    <div id="Slideshow_Background"> 
+      <div id="Slideshow_Container">
+        
+		<div class="mySlides fade">
+          <div class="Slide_Number">1 / 6</div>
+            <img class="Slide_Show_Images" src="./images/jason_scally.jpg" style="width:80%">
+              <div class="text">I'm available to assist you on your project!</div>
+        </div>
+        
+		<div class="mySlides fade">
+          <div class="Slide_Number">2 / 6</div>
+            <img class="Slide_Show_Images" src="./images/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
+            <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="Slide_Number">3 / 6</div>
+            <img class="Slide_Show_Images" src="./images/Python.png" style="width:100%">
+            <div class="text">the popular programming language Python,</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="Slide_Number">4 / 6</div>
+            <img class="Slide_Show_Images" src="./images/C_Sharp_and_Dot_NET.png" style="width:100%">
+            <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+        </div>
+
+		<div class="mySlides fade">
+	      <div class="Slide_Number">5 / 6</div>
+			<img class="Slide_Show_Images" src="./images/SQL_and_Database.jpg" style="width:100%">
+            <div class="text">back end development, databases and SQL.</div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="Slide_Number">6 / 6</div>
+			<img class="Slide_Show_Images" src="./images/Coding_1.jpg" style="width:100%">
+			  <div class="text"> 
+				<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+			  </div>
+	    </div>
+	
+		  <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+		
+	  </div>
+  <br>
+
+      <div style="text-align:center">
+ 
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+		<span class="dot" onclick="currentSlide(4)"></span> 
+		<span class="dot" onclick="currentSlide(5)"></span> 
+		<span class="dot" onclick="currentSlide(6)"></span> 
+
+      </div>
+    </div>
+  </div>
+
 <!-- About section -->
 	<div class="Row" id="About"> 
 		<div class="Column_2"> <!-- Left column -->
@@ -55,8 +118,13 @@
 		</div>
   
 		<div class="Column_1"> <!-- Right column -->
-			<h1>About</h2>
-				<p>I am a software developer who loves to code! As a father of four, I enjoy time with my family and traveling. <br><br>I am a graduate of <a href="https://www.snhu.edu/" target="_blank">Southern New Hampshire University</a> with a Bachelors in Information Technology, and <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp. I am trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br><br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!</p>
+			<h1>About</h1>
+				<p>I am a software developer who loves to code! As a father of four, I enjoy time with my family and traveling. 
+					<br><br>I am a graduate of <a href="https://www.snhu.edu/" target="_blank">Southern New Hampshire University</a> 
+					with a Bachelors in Information Technology, and <a href="https://www.learncodinganywhere.com" target="_blank">
+					The Tech Academy</a>’s Software Developer Boot Camp. I am trained and experienced in the following web and 
+					programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br><br>I am a full-stack developer and would 
+					love to work with you on your project. <a href="#Contact">Contact</a> me below!</p>
 		</div>
 	</div>
 
@@ -79,22 +147,20 @@
 	</div>
 
 <!-- Contact section -->
-	<div class="Row" id="Contact"> 
-		<div class="Column_3"> <!-- Contact image, left column -->
-			<img src="./images/Contact.jpg" alt="Contact_Image">
-		</div>
-	
-		<div class="Column_1"> <!-- Contact form, right "column" -->
-			<h1>Contact</h2> 
-				<form action="" method="get"> <!-- This specifies where to send the form data and how; it is left blank -->
-					<label>Name:</label>
-						<input type="text" placeholder="Please enter your name here">
-					<label>Email:</label>
-						<input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-					<label>Message:</label>
-						<input type="text" id="Message" name="Message" placeholder="Please write your message here">
-						<input type="submit" value="Submit">
-				</form>
+	<div id="Contact"> 
+		<button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>	
+		<div class="form-popup" id="myForm"> <!-- Contact form, right "column" -->
+			<form action="https://formspree.io/maypgjak" method="POST" class="form-container">
+			<h1>Contact</h1>
+				<label>Name:</label>
+					<input type="text" placeholder="Please enter your name...">
+				<label>Email:</label>
+					<input type="text" id="Email" name="Email" placeholder="Please enter your email...">
+				<label>Message:</label>
+					<input type="text" id="Message" name="Message" placeholder="Please write your message...">
+				<button type="submit" class="btn">SUBMIT</button>
+				<button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+			</form>
 		</div>
 	</div>
 	
@@ -102,7 +168,6 @@
 	<footer>
 		<p class="center_text">&copy Prosper Consulting Inc.,  <a href="https://learncodinganywhere.com/">The Tech Academy</a><br></p>
 	</footer>
-
-		</body>
-
+<script src="./js/portfolio.js"></script>
+</body>
 </html>
